@@ -1,34 +1,34 @@
 import { useRouter } from "next/navigation";
-import { calculateMatchScore } from "../utlis/calculateMatchScore";
-import { useJobStore } from "@/store/jobStore";
-import MatchScore from "@/components/MatchScore";
 
-interface JobProps {
-  job: {
-    id: number;
-    title: string;
-    company: string;
-    location: string;
-    salary: string;
-    requiredSkills: string[];
-    matchScore: number;
-  };
-}
+const getMatchScoreColor = (score: number) => {
+  if (score >= 80) return "bg-green-500"; // Green for 80%+
+  if (score >= 50) return "bg-yellow-500"; // Yellow for 50-79%
+  return "bg-red-500"; // Red for below 50%
+};
 
-const JobCard: React.FC<JobProps> = ({ job }) => {
+const JobCard = ({ job }) => {
   const router = useRouter();
-  const { user } = useJobStore();
-  const matchScore = calculateMatchScore(user.skills, job.requiredSkills);
 
   return (
-    <div className="p-4 border rounded-lg shadow-md">
-      <h3 className="text-lg font-semibold">{job.title}</h3>
+    <div className="border p-4 rounded-lg shadow-md my-4">
+      <h3 className="text-xl font-semibold">{job.title}</h3>
       <p>{job.company} - {job.location}</p>
-      <p className="text-sm text-gray-600">{job.salary}</p>
-      <MatchScore score={matchScore} />
-      <button 
+      <p className="text-green-600">{job.salary}</p>
+
+      {/* Match Score Visualization */}
+      <div className="mt-3">
+        <p>Match Score: {job.matchScore}%</p>
+        <div className="w-full bg-gray-300 h-2 rounded">
+          <div
+            className={`h-2 rounded ${getMatchScoreColor(job.matchScore)}`}
+            style={{ width: `${job.matchScore}%` }}
+          ></div>
+        </div>
+      </div>
+
+      <button
+        className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"
         onClick={() => router.push(`/job/${job.id}`)}
-        className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg"
       >
         View Details
       </button>

@@ -1,100 +1,44 @@
-"use client";
-
 import { useState } from "react";
 
-interface ApplyFormProps {
-  jobTitle: string;
-  onClose: () => void;
-}
-
-const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle, onClose }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    experience: "",
-    coverLetter: "",
-  });
-
+const ApplyForm = ({ jobTitle }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [resume, setResume] = useState<File | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    if (!resume) {
+      alert("Please upload your resume before submitting.");
+      return;
+    }
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2000);
+    setTimeout(() => setSubmitted(false), 2000);
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
-        {submitted ? (
-          <div className="text-center text-green-600 text-lg font-semibold">
-            ✅ Application Successful!
-          </div>
-        ) : (
-          <>
-            <h2 className="text-xl font-semibold mb-4">Apply for {jobTitle}</h2>
-            <form onSubmit={handleSubmit} className="space-y-3">
-              {/* Full Name */}
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              />
+    <div className="mt-4 bg-white p-4 rounded-lg shadow-md w-full max-w-lg">
+      {submitted ? (
+        <p className="text-green-600 text-center">Application Successful!</p>
+      ) : (
+        <form onSubmit={handleSubmit} className="flex flex-col">
+          <h3 className="text-lg font-semibold mb-2">Applying for {jobTitle}</h3>
+          <input type="text" placeholder="Full Name" className="border p-2 rounded mb-2" required />
+          <input type="email" placeholder="Email" className="border p-2 rounded mb-2" required />
+          <input type="text" placeholder="Experience (e.g., 3 years)" className="border p-2 rounded mb-2" required />
+          <textarea placeholder="Cover Letter" className="border p-2 rounded mb-2" required />
+          
+          {/* Resume Upload */}
+          <label className="mb-2">Upload Resume:</label>
+          <input
+            type="file"
+            accept=".pdf,.doc,.docx"
+            onChange={(e) => setResume(e.target.files?.[0] || null)}
+            className="border p-2 rounded mb-2"
+            required
+          />
 
-              {/* Email */}
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              />
-
-              {/* Experience */}
-              <input
-                type="number"
-                name="experience"
-                placeholder="Years of Experience"
-                required
-                value={formData.experience}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              />
-
-              {/* Cover Letter */}
-              <textarea
-                name="coverLetter"
-                placeholder="Write a short cover letter..."
-                required
-                value={formData.coverLetter}
-                onChange={handleChange}
-                className="w-full p-2 border rounded"
-              />
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
-                Submit Application
-              </button>
-            </form>
-          </>
-        )}
-      </div>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+        </form>
+      )}
     </div>
   );
 };
