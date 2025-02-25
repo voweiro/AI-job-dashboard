@@ -1,25 +1,26 @@
 "use client";
-
 import { useEffect } from "react";
-import { useJobStore } from "@/store/jobStore";
-import JobCard from "./JobCard";
-import jobData from "@/data/jobs.json";
+import { useJobStore } from "../store/jobStore";
 
 const JobList = () => {
   const { jobs, setJobs } = useJobStore();
 
   useEffect(() => {
-    setJobs(jobData);
-  }, [setJobs]);
+    fetch("/jobs.json") // If saved in `public/`
+      .then((response) => response.json())
+      .then((data) => setJobs(data))
+      .catch((error) => console.error("Error loading jobs:", error));
+  }, []);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h2 className="text-xl font-semibold mb-4">Job Recommendations</h2>
-      <div className="space-y-4">
-        {jobs.map((job) => (
-          <JobCard key={job.id} job={job} />
-        ))}
-      </div>
+    <div>
+      {jobs.map((job) => (
+        <div key={job.id} className="p-4 border mb-4">
+          <h3>{job.title}</h3>
+          <p>{job.company} - {job.location}</p>
+          <p>{job.salary}</p>
+        </div>
+      ))}
     </div>
   );
 };
