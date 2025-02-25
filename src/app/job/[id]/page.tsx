@@ -1,38 +1,59 @@
 "use client";
-
-import { useState } from "react";
 import { useParams } from "next/navigation";
-import { useJobStore } from "@/store/jobStore";
-import ApplyForm from "@/components/ApplyForm";
+import { useJobStore } from "../../../store/jobStore";
+import ApplyForm from "../../../components/ApplyForm";
+import { useState } from "react";
 
-export default function JobDetails() {
+const mockUserSkills = ["React", "JavaScript", "Tailwind CSS"]; // Mock user skills
+
+const JobDetails = () => {
   const { id } = useParams();
   const { jobs } = useJobStore();
-  const [isApplying, setIsApplying] = useState(false);
+  const job = jobs.find((j) => j.id === parseInt(id as string));
+  const [showWarning, setShowWarning] = useState(false);
 
-  const job = jobs.find((j) => j.id === Number(id));
+  if (!job) return <p>Job not found!</p>;
 
-  if (!job) return <p className="text-center text-red-500">Job not found!</p>;
+  // Check if user is missing required skills
+  const missingSkills = job.requiredSkills.filter((skill) => !mockUserSkills.includes(skill));
 
   return (
-    <main className="p-6 max-w-2xl mx-auto">
-      <h1 className="text-2xl font-bold">{job.title}</h1>
-      <p className="text-gray-600">{job.company} - {job.location}</p>
-      <p className="text-gray-500">{job.salary}</p>
-      <ul className="mt-3">
-        {job.requiredSkills.map((skill, index) => (
-          <li key={index} className="text-blue-600">• {skill}</li>
-        ))}
-      </ul>
+    <div className="p-6">
+      <h2 className="text-2xl font-bold">{job.title}</h2>
+      <p>{job.company} - {job.location}</p>
+      <p className="text-green-600">{job.salary}</p>
 
+      {/* Required Skills */}
+      <div className="mt-4">
+        <h3 className="font-semibold">Required Skills:</h3>
+        <ul className="list-disc pl-5">
+          {job.requiredSkills.map((skill) => (
+            <li key={skill} className={`${missingSkills.includes(skill) ? "text-red-500" : "text-green-600"}`}>
+              {skill} {missingSkills.includes(skill) && "(Missing)"}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Missing Skills Warning */}
+      {missingSkills.length > 0 && showWarning && (
+        <div className="bg-yellow-100 border border-yellow-500 text-yellow-700 px-4 py-2 rounded mt-4">
+          ⚠️ Warning: You are missing skills in {missingSkills.join(", ")}. Consider upskilling.
+        </div>
+      )}
+
+      {/* Apply Button */}
       <button
-        className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-        onClick={() => setIsApplying(true)}
+        onClick={() => setShowWarning(true)}
+        className="mt-4 bg-yellow-500 text-white px-4 py-2 rounded"
       >
-        Apply Now
+        Proceed to Apply
       </button>
 
-      {isApplying && <ApplyForm jobTitle={job.title} onClose={() => setIsApplying(false)} />}
-    </main>
+      {/* Show Apply Form after warning */}
+      {showWarning && <ApplyForm jobTitle={job.title} />}
+    </div>
   );
-}
+};
+
+export default JobDetails;
