@@ -1,37 +1,37 @@
 import { useRouter } from "next/navigation";
-
-const getMatchScoreColor = (score: number) => {
-  if (score >= 80) return "bg-green-500"; // Green for 80%+
-  if (score >= 50) return "bg-yellow-500"; // Yellow for 50-79%
-  return "bg-red-500"; // Red for below 50%
-};
+import MatchScore from "./MatchScore";
 
 const JobCard = ({ job }) => {
   const router = useRouter();
 
   return (
-    <div className="border p-4 rounded-lg shadow-md my-4">
-      <h3 className="text-xl font-semibold">{job.title}</h3>
-      <p>{job.company} - {job.location}</p>
-      <p className="text-green-600">{job.salary}</p>
+    <div className="bg-white shadow-md hover:shadow-lg rounded-lg p-6 transition-all duration-300 border border-gray-200">
+      <h3 className="text-xl font-semibold text-gray-900">{job.title}</h3>
+      <p className="text-gray-600">{job.company} - {job.location}</p>
+      <p className="text-green-600 font-medium">{job.salary}</p>
+
+      {/* ✅ Short Job Description Preview */}
+      <p className="text-gray-700 text-sm mt-2 line-clamp-2">
+        {job.description.length > 100 ? `${job.description.substring(0, 100)}...` : job.description}
+      </p>
 
       {/* Match Score Visualization */}
-      <div className="mt-3">
-        <p>Match Score: {job.matchScore}%</p>
-        <div className="w-full bg-gray-300 h-2 rounded">
-          <div
-            className={`h-2 rounded ${getMatchScoreColor(job.matchScore)}`}
-            style={{ width: `${job.matchScore}%` }}
-          ></div>
-        </div>
-      </div>
+      <MatchScore score={job.matchScore} />
 
-      <button
-        className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"
-        onClick={() => router.push(`/job/${job.id}`)}
-      >
-        View Details
-      </button>
+      <div className="mt-4 flex items-center justify-between">
+        <button
+          onClick={() => router.push(`/job/${job.id}`)}
+          className="text-blue-600 hover:underline"
+        >
+          View Details →
+        </button>
+        <button
+          className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200"
+          onClick={() => router.push(`/job/${job.id}`)}
+        >
+          Apply Now
+        </button>
+      </div>
     </div>
   );
 };

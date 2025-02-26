@@ -8,32 +8,15 @@ interface Job {
   salary: string;
   requiredSkills: string[];
   matchScore: number;
-}
-
-interface User {
-  name: string;
-  email: string;
-  experience: string;
-  coverLetter: string;
-  skills: string[];
+  description: string;
 }
 
 interface JobStore {
   jobs: Job[];
-  user: User; // ✅ Ensure user is part of the store
   setJobs: (jobs: Job[]) => void;
-  setUser: (user: User) => void;
 }
 
 export const useJobStore = create<JobStore>((set) => ({
   jobs: [],
-  user: {
-    name: "",
-    email: "",
-    experience: "",
-    coverLetter: "",
-    skills: ["React", "Next.js", "JavaScript", "Tailwind CSS"], // Default skills
-  },
-  setJobs: (jobs) => set({ jobs }),
-  setUser: (user) => set({ user }),
+  setJobs: (jobs) => set({ jobs }) // ✅ Fix: Ensure jobs are set correctly
 }));

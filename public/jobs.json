@@ -6,7 +6,8 @@
     "location": "Remote",
     "salary": "$70,000 - $90,000",
     "requiredSkills": ["React", "Next.js", "JavaScript", "Tailwind CSS"],
-    "matchScore": 85
+    "matchScore": 85,
+    "description": "We are looking for a skilled frontend developer to join our remote team. The ideal candidate should be proficient in React, Next.js, and Tailwind CSS."
   },
   {
     "id": 2,
@@ -15,168 +16,247 @@
     "location": "New York, USA",
     "salary": "$80,000 - $100,000",
     "requiredSkills": ["Figma", "React", "CSS"],
-    "matchScore": 70
+    "matchScore": 70,
+    "description": "As a UI Engineer, you will be responsible for creating intuitive user interfaces using Figma and implementing designs in React and CSS."
   },
   {
     "id": 3,
-    "title": "Full Stack Developer",
-    "company": "InnovateTech",
+    "title": "Backend Developer",
+    "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
-    "requiredSkills": ["React", "Node.js", "TypeScript", "MongoDB"],
-    "matchScore": 90
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
+
   {
     "id": 4,
-    "title": "Backend Developer",
-    "company": "DataSystems",
-    "location": "Austin, USA",
-    "salary": "$85,000 - $110,000",
-    "requiredSkills": ["Node.js", "Express", "PostgreSQL"],
-    "matchScore": 75
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
   {
     "id": 5,
-    "title": "Software Engineer",
-    "company": "CodeWorks",
-    "location": "London, UK",
-    "salary": "£60,000 - £80,000",
-    "requiredSkills": ["Python", "Django", "React"],
-    "matchScore": 80
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 6,
-    "title": "Mobile Developer",
-    "company": "AppMakers",
-    "location": "Berlin, Germany",
-    "salary": "€70,000 - €95,000",
-    "requiredSkills": ["React Native", "Flutter", "Kotlin"],
-    "matchScore": 60
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 7,
-    "title": "Data Scientist",
-    "company": "AI Labs",
-    "location": "Toronto, Canada",
-    "salary": "CAD 90,000 - 120,000",
-    "requiredSkills": ["Python", "TensorFlow", "Machine Learning"],
-    "matchScore": 85
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 8,
-    "title": "DevOps Engineer",
-    "company": "Cloud Solutions",
-    "location": "Seattle, USA",
-    "salary": "$95,000 - $125,000",
-    "requiredSkills": ["AWS", "Docker", "Kubernetes"],
-    "matchScore": 78
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 9,
-    "title": "Cybersecurity Analyst",
-    "company": "SecureTech",
-    "location": "Sydney, Australia",
-    "salary": "AUD 100,000 - 130,000",
-    "requiredSkills": ["Security", "Penetration Testing", "Network Security"],
-    "matchScore": 65
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 10,
-    "title": "Machine Learning Engineer",
-    "company": "DeepMind",
-    "location": "Paris, France",
-    "salary": "€80,000 - €110,000",
-    "requiredSkills": ["Python", "Deep Learning", "NLP"],
-    "matchScore": 88
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
+
   {
     "id": 11,
-    "title": "Game Developer",
-    "company": "Epic Games",
-    "location": "Los Angeles, USA",
-    "salary": "$80,000 - $100,000",
-    "requiredSkills": ["C#", "Unity", "Unreal Engine"],
-    "matchScore": 72
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
   {
     "id": 12,
-    "title": "Blockchain Developer",
-    "company": "Crypto Innovators",
-    "location": "Singapore",
-    "salary": "$100,000 - $140,000",
-    "requiredSkills": ["Solidity", "Ethereum", "Smart Contracts"],
-    "matchScore": 83
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
+
   {
     "id": 13,
-    "title": "IT Support Engineer",
-    "company": "TechHelp",
-    "location": "Dubai, UAE",
-    "salary": "AED 90,000 - 120,000",
-    "requiredSkills": ["Windows", "Linux", "Networking"],
-    "matchScore": 55
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
   {
     "id": 14,
-    "title": "Embedded Systems Engineer",
-    "company": "ChipMakers",
-    "location": "Seoul, South Korea",
-    "salary": "₩90M - ₩120M",
-    "requiredSkills": ["C", "Microcontrollers", "IoT"],
-    "matchScore": 74
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
   {
     "id": 15,
-    "title": "Cloud Architect",
-    "company": "BigCloud",
-    "location": "San Jose, USA",
-    "salary": "$110,000 - $150,000",
-    "requiredSkills": ["AWS", "Azure", "Cloud Security"],
-    "matchScore": 89
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 16,
-    "title": "AI Research Scientist",
-    "company": "OpenAI",
+    "title": "Frontend Developer",
+    "company": "CloudTech",
     "location": "San Francisco, USA",
-    "salary": "$150,000 - $200,000",
-    "requiredSkills": ["Python", "Deep Learning", "Reinforcement Learning"],
-    "matchScore": 95
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 17,
-    "title": "Database Administrator",
-    "company": "DataBank",
-    "location": "Chicago, USA",
-    "salary": "$85,000 - $110,000",
-    "requiredSkills": ["SQL", "MySQL", "PostgreSQL"],
-    "matchScore": 79
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 18,
     "title": "Frontend Developer",
-    "company": "WebX",
-    "location": "Amsterdam, Netherlands",
-    "salary": "€70,000 - €90,000",
-    "requiredSkills": ["Vue.js", "JavaScript", "CSS"],
-    "matchScore": 76
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
+
   {
     "id": 19,
-    "title": "Software Tester",
-    "company": "QualityAssure",
-    "location": "Bangalore, India",
-    "salary": "₹800,000 - ₹1,200,000",
-    "requiredSkills": ["Selenium", "Automation Testing", "Java"],
-    "matchScore": 67
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
+
+
   {
     "id": 20,
-    "title": "Technical Writer",
-    "company": "DocuTech",
-    "location": "Boston, USA",
-    "salary": "$70,000 - $90,000",
-    "requiredSkills": ["Technical Writing", "Documentation", "API Docs"],
-    "matchScore": 81
+    "title": "Frontend Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 65,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
+  },
+
+
+
+  
+
+  {
+    "id": 24,
+    "title": "System Administrator",
+    "company": "IT Solutions",
+    "location": "Los Angeles, USA",
+    "salary": "$75,000 - $95,000",
+    "requiredSkills": ["Linux", "Networking", "Bash Scripting"],
+    "matchScore": 70,
+    "description": "Looking for an experienced system administrator to manage and maintain our IT infrastructure."
   }
 ]

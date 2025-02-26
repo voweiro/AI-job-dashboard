@@ -1,57 +1,43 @@
 "use client";
-import { useParams } from "next/navigation";
-import { useJobStore } from "../../../store/jobStore";
-import ApplyForm from "../../../components/ApplyForm";
-import { useState } from "react";
-
-const mockUserSkills = ["React", "JavaScript", "Tailwind CSS"]; // Mock user skills
+import { useParams, useRouter } from "next/navigation";
+import { useJobStore } from "@/store/jobStore";
+import ApplyForm from "@/components/ApplyForm";
 
 const JobDetails = () => {
   const { id } = useParams();
+  const router = useRouter();
   const { jobs } = useJobStore();
-  const job = jobs.find((j) => j.id === parseInt(id as string));
-  const [showWarning, setShowWarning] = useState(false);
+  const job = jobs.find((j) => j.id === Number(id));
 
-  if (!job) return <p>Job not found!</p>;
-
-  // Check if user is missing required skills
-  const missingSkills = job.requiredSkills.filter((skill) => !mockUserSkills.includes(skill));
+  if (!job) return <p className="text-center text-red-500 text-lg">⚠️ Job not found!</p>;
 
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold">{job.title}</h2>
-      <p>{job.company} - {job.location}</p>
-      <p className="text-green-600">{job.salary}</p>
+    <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg border border-gray-200">
+      <button onClick={() => router.back()} className="text-blue-600 hover:underline">
+        ← Back to Jobs
+      </button>
+
+      <h2 className="text-3xl font-bold text-gray-900 mt-3">{job.title}</h2>
+      <p className="text-lg text-gray-600">{job.company} - {job.location}</p>
+      <p className="text-green-600 text-xl font-semibold">{job.salary}</p>
+
+      {/* ✅ Job Description Section */}
+      <div className="mt-4">
+        <h3 className="text-lg font-semibold text-gray-900">Job Description:</h3>
+        <p className="text-gray-700 leading-relaxed">{job.description}</p>
+      </div>
 
       {/* Required Skills */}
       <div className="mt-4">
-        <h3 className="font-semibold">Required Skills:</h3>
-        <ul className="list-disc pl-5">
+        <h3 className="text-lg font-semibold text-gray-900">Required Skills:</h3>
+        <ul className="list-disc pl-5 text-gray-800">
           {job.requiredSkills.map((skill) => (
-            <li key={skill} className={`${missingSkills.includes(skill) ? "text-red-500" : "text-green-600"}`}>
-              {skill} {missingSkills.includes(skill) && "(Missing)"}
-            </li>
+            <li key={skill}>{skill}</li>
           ))}
         </ul>
       </div>
 
-      {/* Missing Skills Warning */}
-      {missingSkills.length > 0 && showWarning && (
-        <div className="bg-yellow-100 border border-yellow-500 text-yellow-700 px-4 py-2 rounded mt-4">
-          ⚠️ Warning: You are missing skills in {missingSkills.join(", ")}. Consider upskilling.
-        </div>
-      )}
-
-      {/* Apply Button */}
-      <button
-        onClick={() => setShowWarning(true)}
-        className="mt-4 bg-yellow-500 text-white px-4 py-2 rounded"
-      >
-        Proceed to Apply
-      </button>
-
-      {/* Show Apply Form after warning */}
-      {showWarning && <ApplyForm jobTitle={job.title} />}
+      <ApplyForm jobTitle={job.title} />
     </div>
   );
 };
