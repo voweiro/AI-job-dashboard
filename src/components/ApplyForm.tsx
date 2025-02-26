@@ -1,10 +1,14 @@
 import { useState } from "react";
 
-const ApplyForm = ({ jobTitle }) => {
+interface ApplyFormProps {
+  jobTitle: string; // ✅ Explicitly define jobTitle as a string
+}
+
+const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle }) => {
   const [submitted, setSubmitted] = useState(false);
   const [resume, setResume] = useState<File | null>(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!resume) {
       alert("⚠️ Please upload your resume before submitting.");
