@@ -1,7 +1,22 @@
 import { useRouter } from "next/navigation";
 import MatchScore from "./MatchScore";
 
-const JobCard = ({ job }) => {
+interface Job {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  salary: string;
+  requiredSkills: string[];
+  matchScore: number;
+  description: string;
+}
+
+interface JobCardProps {
+  job: Job; // ✅ Explicitly define job type
+}
+
+const JobCard: React.FC<JobCardProps> = ({ job }) => {
   const router = useRouter();
 
   return (
