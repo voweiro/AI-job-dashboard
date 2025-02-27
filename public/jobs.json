@@ -16,7 +16,7 @@
     "location": "New York, USA",
     "salary": "$80,000 - $100,000",
     "requiredSkills": ["Figma", "React", "CSS"],
-    "matchScore": 70,
+    "matchScore": 40,
     "description": "As a UI Engineer, you will be responsible for creating intuitive user interfaces using Figma and implementing designs in React and CSS."
   },
   {
@@ -40,7 +40,7 @@
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 50,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
@@ -48,9 +48,9 @@
 
   {
     "id": 5,
-    "title": "Frontend Developer",
+    "title": "UI/UX Designer",
     "company": "CloudTech",
-    "location": "San Francisco, USA",
+    "location": "London, UK",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
     "matchScore": 65,
@@ -62,19 +62,19 @@
     "id": 6,
     "title": "Frontend Developer",
     "company": "CloudTech",
-    "location": "San Francisco, USA",
+    "location": "New York, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 90,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
 
   {
     "id": 7,
-    "title": "Frontend Developer",
+    "title": "Full Stack Developer",
     "company": "CloudTech",
-    "location": "San Francisco, USA",
+    "location": "London, UK",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
     "matchScore": 65,
@@ -89,7 +89,7 @@
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 20,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
@@ -149,12 +149,12 @@
 
   {
     "id": 13,
-    "title": "Frontend Developer",
+    "title": "UI Engineer",
     "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 95,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
@@ -162,12 +162,12 @@
 
   {
     "id": 14,
-    "title": "Frontend Developer",
+    "title": "Full Stack Developer",
     "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 15,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
@@ -179,32 +179,32 @@
     "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
-    "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "requiredSkills": ["Node.js", "Express", "Figma"],
+    "matchScore": 85,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
 
   {
     "id": 16,
-    "title": "Frontend Developer",
-    "company": "CloudTech",
-    "location": "San Francisco, USA",
+    "title": "Backend Developer",
+    "company": "LexTech",
+    "location": "Remote",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 20,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
 
   {
     "id": 17,
-    "title": "Frontend Developer",
+    "title": "UI Engineer",
     "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 35,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
@@ -229,14 +229,25 @@
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",
     "requiredSkills": ["Node.js", "Express", "MongoDB"],
-    "matchScore": 65,
+    "matchScore": 10,
     "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
   },
 
 
   {
     "id": 20,
-    "title": "Frontend Developer",
+    "title": "Full Stack Developer",
+    "company": "CloudTech",
+    "location": "San Francisco, USA",
+    "salary": "$90,000 - $120,000",
+    "requiredSkills": ["Node.js", "Express", "MongoDB"],
+    "matchScore": 45,
+    "description": "We need a backend developer skilled in Node.js, Express, and MongoDB to help build our scalable cloud solutions."
+  },
+
+  {
+    "id": 21,
+    "title": "Full Stack Developer",
     "company": "CloudTech",
     "location": "San Francisco, USA",
     "salary": "$90,000 - $120,000",

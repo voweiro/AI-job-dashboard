@@ -102,6 +102,7 @@ export default function JobsPage() {
           <option value="">All Locations</option>
           <option value="Remote">Remote</option>
           <option value="New York, USA">New York, USA</option>
+          <option value="San Francisco, USA">San Francisco, USA</option>
           <option value="London, UK">London, UK</option>
         </select>
 
