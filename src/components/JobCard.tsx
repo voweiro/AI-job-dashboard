@@ -25,19 +25,19 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
       <p className="text-gray-600">{job.company} - {job.location}</p>
       <p className="text-green-600 font-medium">{job.salary}</p>
 
-      {/* ✅ Match Score Visualization */}
+    
       <MatchScore score={job.matchScore} />
 
       <div className="mt-4 flex items-center justify-between">
         <button
-          onClick={() => router.push(`/job/${job.id}`)} // ✅ Ensure correct URL structure
+          onClick={() => router.push(`/job/${job.id}`)} 
           className="text-blue-600 hover:underline"
         >
           View Details →
         </button>
         <button
           className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200"
-          onClick={() => router.push(`/job/${job.id}`)} // ✅ Ensure correct URL structure
+          onClick={() => router.push(`/job/${job.id}`)} 
         >
           Apply Now
         </button>

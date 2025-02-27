@@ -24,7 +24,7 @@ export default function Contact() {
       <h1 className="text-4xl font-bold text-center text-gray-900">Contact Us</h1>
       <p className="text-center text-gray-700 mt-2 text-lg">We’d love to hear from you! Fill out the form below, and we'll get back to you.</p>
 
-      {/* ✅ Contact Form */}
+     
       <form onSubmit={handleSubmit} className="mt-6 space-y-4">
         <input
           type="text"
@@ -67,7 +67,7 @@ export default function Contact() {
         </button>
       </form>
 
-      {/* ✅ Contact Details */}
+     
       <div className="mt-12 text-center">
         <h2 className="text-2xl font-bold text-gray-900">Other Ways to Reach Us</h2>
         <p className="text-gray-600 mt-3">Email: support@aijobmatch.com</p>

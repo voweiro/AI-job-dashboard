@@ -6,7 +6,7 @@ export default function About() {
           AI Job Match is an intelligent job search platform that connects job seekers with the best job opportunities based on their skills and experience.
         </p>
   
-        {/* ✅ Mission Section */}
+        
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
           <p className="text-gray-600 mt-3">
@@ -15,7 +15,7 @@ export default function About() {
           <img src="/mission.jpg" alt="Mission" className="mx-auto mt-6 w-full md:w-2/3 rounded-lg shadow-lg" />
         </div>
   
-        {/* ✅ Why Choose Us Section */}
+        
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-center text-gray-900">Why Choose AI Job Match?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
@@ -37,7 +37,7 @@ export default function About() {
           </div>
         </div>
   
-        {/* ✅ Call to Action */}
+       
         <div className="mt-12 text-center">
           <h2 className="text-2xl font-bold text-gray-900">Join Thousands of Job Seekers Today</h2>
           <p className="text-gray-600 mt-3">Take the next step in your career with AI-powered job matching.</p>

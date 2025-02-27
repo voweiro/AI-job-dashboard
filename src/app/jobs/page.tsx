@@ -5,6 +5,15 @@ import JobCard from "@/components/JobCard";
 import Pagination from "@/components/Pagination";
 import LoadingSkeleton from "@/components/LoadingSkeleton";
 
+// ✅ Define TypeScript Interface for Job
+interface Job {
+  id: number;
+  title: string;
+  company: string;
+  location: string;
+  requiredSkills: string[];
+}
+
 export default function JobsPage() {
   const { jobs, setJobs } = useJobStore();
   const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +23,6 @@ export default function JobsPage() {
   // ✅ Search & Filter States
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
-  const [salaryRange, setSalaryRange] = useState("");
   const [jobType, setJobType] = useState("");
 
   useEffect(() => {
@@ -38,23 +46,8 @@ export default function JobsPage() {
     fetchJobs();
   }, [setJobs]);
 
-  // ✅ Fix Salary Filtering
-  const matchesSalary = (job) => {
-    if (!salaryRange) return true;
-    const [minSalary, maxSalary] = salaryRange.split("-").map(Number);
-
-    // ✅ Extract numeric salary values from job.salary (e.g., "$60,000 - $80,000")
-    const salaryNumbers = job.salary.replace(/\D/g, " ").trim().split(/\s+/).map(Number);
-    if (salaryNumbers.length < 2) return false;
-
-    const jobMinSalary = salaryNumbers[0];
-    const jobMaxSalary = salaryNumbers[1];
-
-    return jobMinSalary >= minSalary && jobMaxSalary <= maxSalary;
-  };
-
   // ✅ Filtering Jobs
-  const filteredJobs = jobs.filter((job) => {
+  const filteredJobs = jobs.filter((job: Job) => {
     const matchesSearch =
       searchTerm === "" ||
       job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -69,7 +62,7 @@ export default function JobsPage() {
     const matchesJobType =
       jobType === "" || job.title.toLowerCase().includes(jobType.toLowerCase());
 
-    return matchesSearch && matchesLocation && matchesSalary(job) && matchesJobType;
+    return matchesSearch && matchesLocation && matchesJobType;
   });
 
   const indexOfLastJob = currentPage * jobsPerPage;
@@ -82,7 +75,7 @@ export default function JobsPage() {
         Browse Available Jobs
       </h1>
 
-      {/* ✅ Search & Filter Section */}
+      {/* ✅ Search & Filter Section (No Salary Filter) */}
       <div className="flex flex-col md:flex-row gap-4 mb-6">
         {/* Search Bar */}
         <input
@@ -103,18 +96,6 @@ export default function JobsPage() {
           <option value="Remote">Remote</option>
           <option value="New York, USA">New York, USA</option>
           <option value="London, UK">London, UK</option>
-        </select>
-
-        {/* Salary Filter */}
-        <select
-          value={salaryRange}
-          onChange={(e) => setSalaryRange(e.target.value)}
-          className="p-3 border rounded-md"
-        >
-          <option value="">All Salaries</option>
-          <option value="40000-60000">40000 - 60000</option>
-          <option value="60000-80000">60000 - 80000</option>
-          <option value="80000-100000">80000 - 100000</option>
         </select>
 
         {/* Job Type Filter */}
