@@ -24,7 +24,7 @@ const JobList = () => {
     <div className="p-6 max-w-6xl mx-auto">
       <h1 className="text-4xl font-bold text-blue-600 text-center mb-6">Find Your Dream Job</h1>
 
-      {/* Skeleton Loader */}
+      
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[...Array(6)].map((_, i) => (

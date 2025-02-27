@@ -20,17 +20,17 @@ export default function About() {
           <h2 className="text-2xl font-bold text-center text-gray-900">Why Choose AI Job Match?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="p-6 bg-blue-100 rounded-lg shadow-md text-center">
-              <img src="/ai-icon.svg" alt="AI Matching" className="mx-auto w-12 h-12" />
+              <img src="/ai.jpg" alt="AI Matching" className="mx-auto w-12 h-12" />
               <h3 className="text-lg font-semibold mt-4">AI-Powered Job Matching</h3>
               <p className="text-gray-700 mt-2">We use AI to connect you with the best opportunities based on your skills.</p>
             </div>
             <div className="p-6 bg-green-100 rounded-lg shadow-md text-center">
-              <img src="/growth-icon.svg" alt="Career Growth" className="mx-auto w-12 h-12" />
+              <img src="/growth.jpg" alt="Career Growth" className="mx-auto w-12 h-12" />
               <h3 className="text-lg font-semibold mt-4">Career Growth Insights</h3>
               <p className="text-gray-700 mt-2">Access salary trends and skill recommendations to boost your career.</p>
             </div>
             <div className="p-6 bg-yellow-100 rounded-lg shadow-md text-center">
-              <img src="/resume-icon.svg" alt="Smart Resume" className="mx-auto w-12 h-12" />
+              <img src="/resume.jpg" alt="Smart Resume" className="mx-auto w-12 h-12" />
               <h3 className="text-lg font-semibold mt-4">Smart Resume Analysis</h3>
               <p className="text-gray-700 mt-2">Get AI-driven feedback to improve your resume and increase interview chances.</p>
             </div>

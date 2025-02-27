@@ -18,5 +18,5 @@ interface JobStore {
 
 export const useJobStore = create<JobStore>((set) => ({
   jobs: [],
-  setJobs: (jobs) => set({ jobs }) // ✅ Fix: Ensure jobs are set correctly
+  setJobs: (jobs) => set({ jobs }) 
 }));

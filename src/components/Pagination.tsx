@@ -1,7 +1,7 @@
 interface PaginationProps {
-  currentPage: number; // ✅ Explicitly define as number
-  totalPages: number; // ✅ Explicitly define as number
-  onPageChange: (page: number) => void; // ✅ Function that takes a number
+  currentPage: number; 
+  totalPages: number; 
+  onPageChange: (page: number) => void; 
 }
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {

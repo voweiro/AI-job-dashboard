@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 export default function Home() {
   return (
     <div className="py-24">
-      {/* ✅ Hero Section with Slideshow */}
+      
       <div className="text-center mb-10">
         <h1 className="text-5xl font-bold text-gray-900">Find Your Dream Job with AI</h1>
         <p className="text-lg text-gray-700 mt-4 max-w-2xl mx-auto">
@@ -16,6 +16,7 @@ export default function Home() {
         </p>
       </div>
 
+    
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
@@ -27,33 +28,31 @@ export default function Home() {
           <img src="/slide1.jpg" alt="AI Matching Jobs" className="w-full h-64 object-cover" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/slide2.jpg" alt="Best Career Growth" className="w-full h-64 object-cover" />
+          <img src="/slide2.jpg" alt="Best Career Growth" className="w-full h-64 object-fill" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/slide3.jpg" alt="Top Companies Hiring" className="w-full h-64 object-cover" />
+          <img src="/slide3.jpg" alt="Top Companies Hiring" className="w-full h-64 object-fill" />
         </SwiperSlide>
       </Swiper>
 
-      {/* ✅ Features Section */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div className="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/ai-icon.svg" alt="AI Matching" className="mx-auto w-16 h-16" />
+          <img src="/ai.jpg" alt="AI Matching" className="mx-auto w-16 h-16" />
           <h3 className="text-xl font-semibold mt-4">AI-Powered Job Matching</h3>
           <p className="text-gray-600 mt-2">Find the best jobs based on your skills and preferences.</p>
         </div>
         <div className="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/resume-icon.svg" alt="Resume Analysis" className="mx-auto w-16 h-16" />
+          <img src="/resume.jpg" alt="Resume Analysis" className="mx-auto w-16 h-16" />
           <h3 className="text-xl font-semibold mt-4">Smart Resume Analysis</h3>
           <p className="text-gray-600 mt-2">Get AI-driven feedback to improve your resume.</p>
         </div>
         <div className="p-6 bg-white shadow-lg rounded-lg">
-          <img src="/growth-icon.svg" alt="Career Growth" className="mx-auto w-16 h-16" />
+          <img src="/growth.jpg" alt="Career Growth" className="mx-auto w-16 h-16" />
           <h3 className="text-xl font-semibold mt-4">Career Growth Insights</h3>
           <p className="text-gray-600 mt-2">Explore job trends and salary expectations.</p>
         </div>
       </div>
 
-      {/* ✅ How It Works Section */}
       <div className="mt-16 text-center">
         <h2 className="text-4xl font-bold text-gray-900">How It Works</h2>
         <p className="text-gray-600 mt-2">A simple and effective process to land your dream job.</p>

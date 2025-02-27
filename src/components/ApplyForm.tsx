@@ -13,7 +13,7 @@ const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle, missingSkills }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // ✅ Show warning if skills are missing
+    
     if (missingSkills.length > 0) {
       setShowWarning(true);
       return;
@@ -38,7 +38,7 @@ const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle, missingSkills }) => {
             Apply for <span className="text-blue-600">{jobTitle}</span>
           </h3>
 
-          {/* ✅ Show Warning When Applying */}
+        
           {showWarning && (
             <div className="bg-yellow-100 border border-yellow-500 text-yellow-700 px-4 py-2 rounded mb-3">
               ⚠️ You are missing {missingSkills.join(", ")}. You can still apply, but upskilling is recommended.
@@ -50,7 +50,7 @@ const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle, missingSkills }) => {
           <input type="text" placeholder="Experience (e.g., 3 years)" className="border p-3 rounded mb-2" required />
           <textarea placeholder="Cover Letter" className="border p-3 rounded mb-2" required />
 
-          {/* Resume Upload */}
+          
           <label className="mb-2 text-gray-800 font-semibold">Upload Resume (PDF/DOC):</label>
           <input
             type="file"
