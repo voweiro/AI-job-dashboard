@@ -97,7 +97,7 @@ export default function JobsPage() {
         <select
           value={location}
           onChange={(e) => setLocation(e.target.value)}
-          className="p-3 border rounded-md"
+          className="p-3 bg-green-200 border text-blue-700 rounded-md"
         >
           <option value="">All Locations</option>
           <option value="Remote">Remote</option>
@@ -122,7 +122,7 @@ export default function JobsPage() {
         <select
           value={jobType}
           onChange={(e) => setJobType(e.target.value)}
-          className="p-3 border rounded-md"
+          className="p-3  bg-green-200 border text-blue-700 border rounded-md"
         >
           <option value="">All Job Types</option>
           <option value="Frontend">Frontend Developer</option>
