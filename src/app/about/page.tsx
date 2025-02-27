@@ -21,17 +21,17 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="p-6 bg-blue-100 rounded-lg shadow-md text-center">
               <img src="/ai.jpg" alt="AI Matching" className="mx-auto w-12 h-12" />
-              <h3 className="text-lg font-semibold mt-4">AI-Powered Job Matching</h3>
+              <h3 className="text-lg text-black font-semibold mt-4">AI-Powered Job Matching</h3>
               <p className="text-gray-700 mt-2">We use AI to connect you with the best opportunities based on your skills.</p>
             </div>
             <div className="p-6 bg-green-100 rounded-lg shadow-md text-center">
               <img src="/growth.jpg" alt="Career Growth" className="mx-auto w-12 h-12" />
-              <h3 className="text-lg font-semibold mt-4">Career Growth Insights</h3>
+              <h3 className="text-lg  text-blackfont-semibold mt-4">Career Growth Insights</h3>
               <p className="text-gray-700 mt-2">Access salary trends and skill recommendations to boost your career.</p>
             </div>
             <div className="p-6 bg-yellow-100 rounded-lg shadow-md text-center">
               <img src="/resume.jpg" alt="Smart Resume" className="mx-auto w-12 h-12" />
-              <h3 className="text-lg font-semibold mt-4">Smart Resume Analysis</h3>
+              <h3 className="text-lg text-black font-semibold mt-4">Smart Resume Analysis</h3>
               <p className="text-gray-700 mt-2">Get AI-driven feedback to improve your resume and increase interview chances.</p>
             </div>
           </div>

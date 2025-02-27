@@ -38,17 +38,17 @@ export default function Home() {
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div className="p-6 bg-white shadow-lg rounded-lg">
           <img src="/ai.jpg" alt="AI Matching" className="mx-auto w-16 h-16" />
-          <h3 className="text-xl font-semibold mt-4">AI-Powered Job Matching</h3>
+          <h3 className="text-xl text-black font-semibold mt-4">AI-Powered Job Matching</h3>
           <p className="text-gray-600 mt-2">Find the best jobs based on your skills and preferences.</p>
         </div>
         <div className="p-6 bg-white shadow-lg rounded-lg">
           <img src="/resume.jpg" alt="Resume Analysis" className="mx-auto w-16 h-16" />
-          <h3 className="text-xl font-semibold mt-4">Smart Resume Analysis</h3>
+          <h3 className="text-xl text-black font-semibold mt-4">Smart Resume Analysis</h3>
           <p className="text-gray-600 mt-2">Get AI-driven feedback to improve your resume.</p>
         </div>
         <div className="p-6 bg-white shadow-lg rounded-lg">
           <img src="/growth.jpg" alt="Career Growth" className="mx-auto w-16 h-16" />
-          <h3 className="text-xl font-semibold mt-4">Career Growth Insights</h3>
+          <h3 className="text-xl text-black font-semibold mt-4">Career Growth Insights</h3>
           <p className="text-gray-600 mt-2">Explore job trends and salary expectations.</p>
         </div>
       </div>
