@@ -13,7 +13,7 @@ interface Job {
 }
 
 interface JobCardProps {
-  job: Job; // ✅ Explicitly define job type
+  job: Job;
 }
 
 const JobCard: React.FC<JobCardProps> = ({ job }) => {
@@ -25,24 +25,19 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
       <p className="text-gray-600">{job.company} - {job.location}</p>
       <p className="text-green-600 font-medium">{job.salary}</p>
 
-      {/* ✅ Short Job Description Preview */}
-      <p className="text-gray-700 text-sm mt-2 line-clamp-2">
-        {job.description.length > 100 ? `${job.description.substring(0, 100)}...` : job.description}
-      </p>
-
-      {/* Match Score Visualization */}
+      {/* ✅ Match Score Visualization */}
       <MatchScore score={job.matchScore} />
 
       <div className="mt-4 flex items-center justify-between">
         <button
-          onClick={() => router.push(`/job/${job.id}`)}
+          onClick={() => router.push(`/job/${job.id}`)} // ✅ Ensure correct URL structure
           className="text-blue-600 hover:underline"
         >
           View Details →
         </button>
         <button
           className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-all duration-200"
-          onClick={() => router.push(`/job/${job.id}`)}
+          onClick={() => router.push(`/job/${job.id}`)} // ✅ Ensure correct URL structure
         >
           Apply Now
         </button>

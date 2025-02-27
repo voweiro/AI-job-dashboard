@@ -1,19 +1,29 @@
 import { useState } from "react";
 
 interface ApplyFormProps {
-  jobTitle: string; // ✅ Explicitly define jobTitle as a string
+  jobTitle: string;
+  missingSkills: string[];
 }
 
-const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle }) => {
+const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle, missingSkills }) => {
   const [submitted, setSubmitted] = useState(false);
   const [resume, setResume] = useState<File | null>(null);
+  const [showWarning, setShowWarning] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // ✅ Show warning if skills are missing
+    if (missingSkills.length > 0) {
+      setShowWarning(true);
+      return;
+    }
+
     if (!resume) {
       alert("⚠️ Please upload your resume before submitting.");
       return;
     }
+
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 2000);
   };
@@ -27,6 +37,14 @@ const ApplyForm: React.FC<ApplyFormProps> = ({ jobTitle }) => {
           <h3 className="text-lg font-semibold mb-2 text-gray-800 text-center">
             Apply for <span className="text-blue-600">{jobTitle}</span>
           </h3>
+
+          {/* ✅ Show Warning When Applying */}
+          {showWarning && (
+            <div className="bg-yellow-100 border border-yellow-500 text-yellow-700 px-4 py-2 rounded mb-3">
+              ⚠️ You are missing {missingSkills.join(", ")}. You can still apply, but upskilling is recommended.
+            </div>
+          )}
+
           <input type="text" placeholder="Full Name" className="border p-3 rounded mb-2" required />
           <input type="email" placeholder="Email" className="border p-3 rounded mb-2" required />
           <input type="text" placeholder="Experience (e.g., 3 years)" className="border p-3 rounded mb-2" required />
